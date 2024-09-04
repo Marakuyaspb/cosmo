@@ -1,0 +1,3 @@
+Did it:
+
+$ npm install --save dat.gui

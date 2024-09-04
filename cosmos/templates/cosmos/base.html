@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" >
-	<link rel="stylesheet" href=" {% static 'css/style.css' %}">
+
+
+	<link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
+	<header>
+		<div class='nav'>
+			<center>
+				<img src="{% static 'icons/logo_dark.png' %}">
+			</center>
+		</div>
+	</header>
 
 {% block content %}
 {% endblock %}
 
+	<footer>
+		<center>
+			<a href='#'><img class='smm_link' src="{% static 'icons/whatsapp.png' %}"></a>
+			<a href='#'><img class='smm_link'src="{% static 'icons/youtube.png' %}"></a>
+			<a href='#'><img class='smm_link' src="{% static 'icons/tg.png' %}"></a>
+		</center>
+	</footer>
 </body>
 </html>
