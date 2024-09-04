@@ -60,7 +60,8 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 if (isMobileDevice()) {
-    createLetters("R.E.D. Group", 124, 0, 'white' , 'forwards', 'set1');
+    createLetters("R.E.D. Group ⟩ R.E.D. Group ⟩ R.E.D. Group ⟩ ", 124, 0, 'white' , 'forwards', 'set1');
+    createLetters(" ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ", 170, 0, 'white', 'backwards','set2');
 } else {
     createLetters(" ⟩ R.E.D. Group ⟩ R.E.D. Group ⟩ R.E.D. Group", 124, 0, 'white' , 'forwards','set1');
     createLetters(" ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ", 170, 0, 'white', 'backwards','set2');

@@ -12,10 +12,11 @@ a{
 }
 .menu{
     color: #fff;
-    opacity: .8;
+    opacity: .7;
 }
 .menu:hover{
     color: #fff;
+    opacity: .8;
 }
 
 body {
@@ -129,9 +130,14 @@ body {
     width: 3.6em;
 }
 .smm_link{
-    width: 30px;
+    width: 40px;
     margin: 20px 5px;
+    opacity: .7;
 }
+.smm_link:hover{
+    opacity: .9;
+}
+
 .fix_head{
     position: absolute;
     right: 0;
