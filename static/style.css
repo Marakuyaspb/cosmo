@@ -6,6 +6,18 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+a{
+    text-decoration: none;
+}
+.menu{
+    color: #fff;
+    opacity: .8;
+}
+.menu:hover{
+    color: #fff;
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -17,6 +29,27 @@ body {
     background: #161616;
     --speed: 24s;
 }
+
+
+
+
+:root {
+    --fontSize: 20; /* For desctop */
+}
+
+@media (max-width: 768px) { /* For tablets  */
+    :root {
+        --fontSize: 16; /* For mobile devices */
+    }
+}
+
+@media (max-width: 480px) { /* For extra small devices */
+    :root {
+        --fontSize: 20; /* Even smaller font size for very small screens */
+    }
+}
+
+
 .bg-lighting {
     position: absolute;
     pointer-events: none;
@@ -88,4 +121,28 @@ body {
 
 .text-container.set2 .letter {
     transform: rotateX(180deg);
+}
+
+
+
+.logo{
+    width: 3.6em;
+}
+.smm_link{
+    width: 30px;
+    margin: 20px 5px;
+}
+.fix_head{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+}
+.fix_footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
 }

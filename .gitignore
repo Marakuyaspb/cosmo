@@ -1,2 +1,4 @@
 cosmo_rg/.env
 db.sqlite3
+
+static/icons/*

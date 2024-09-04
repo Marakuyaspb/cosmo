@@ -8,7 +8,6 @@ function createLetters(text, rad, offset, frontColor, direction, id) {
     let letters = text.split('');
     if(direction != 'backwards') { letters = letters.reverse(); }
     let dir = ( direction == 'backwards') ? -1 : 1;
-
     const container = document.createElement('div');
     container.classList.add('text-container');
     container.classList.add(id);
@@ -26,12 +25,10 @@ function createLetters(text, rad, offset, frontColor, direction, id) {
         letterElement.classList.add(id);
         letterElement.textContent = letter;
         letterElement.setAttribute("data-text", letter);
-
         letterElement.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px) rotateX(90deg) rotateY(${angle + 90}deg) rotateZ(180deg) translateY(${offset}px)`;
 
         container.appendChild(letterElement);
     });
-
     if (!intervalMap.has(id)) {
         const intervalId = setInterval(() => {
             updateLetters(container, letters.length, 0.54, 1, frontColor, dir, id);
@@ -45,7 +42,6 @@ function updateLetters(container, totalLetters, op1, op2, colorFront, dir, id) {
     const elapsedTime = Date.now() - startTime;
     const rotation = (elapsedTime % animationDuration) / animationDuration * 360;
     const activeAngleRange = 180;
-
     const letters = container.querySelectorAll(`.${id}`); 
     letters.forEach((letter, index) => {
         const letterAngle = 270 + (360 / totalLetters * index);
@@ -67,9 +63,8 @@ if (isMobileDevice()) {
     createLetters("R.E.D. Group", 124, 0, 'white' , 'forwards', 'set1');
 } else {
     createLetters(" ⟩ R.E.D. Group ⟩ R.E.D. Group ⟩ R.E.D. Group", 124, 0, 'white' , 'forwards','set1');
-    createLetters(" ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ", 200, 0, 'white', 'backwards','set2');
+    createLetters(" ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ ⟨ ДЕЛАЕМ ЖИЗНЬ ЯРЧЕ", 170, 0, 'white', 'backwards','set2');
 }
-
 
 function updateText(newText) {
     document.querySelectorAll('.text-container').forEach(container => {
@@ -90,6 +85,7 @@ function updateText(newText) {
 
 
 /* GUI */
+const dat = require('dat.gui');
 
 const CONFIG = { shadowHeight: 24, fontSize: 26, refOpacity: 0.7, refBlur: 2, newText: 'Revolving Text'}
 const CTRL = new GUI()
